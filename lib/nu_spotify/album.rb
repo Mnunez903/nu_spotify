@@ -85,8 +85,7 @@ module NuSpotify
         items = result['items']
         items.each { |track| tracks.push NuSpotify::Track.new(track) }
         break unless has_next
-        next_url = result["next"].scan(%r{https://api.spotify.com(.*)}).flatten.first
-        result = client.get(next_url)
+        result = client.get(result["next"])
         has_next = result['next']
       end
 

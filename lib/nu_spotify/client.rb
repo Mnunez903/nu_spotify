@@ -6,7 +6,11 @@ module NuSpotify
     end
 
     def get(url)
-      raw_get(BASE_URL + url)
+      if url.include?(BASE_URL)
+        JSON.parse RestClient.get(url)
+      else
+        JSON.parse RestClient.get("#{BASE_URL}#{url}")
+      end
     end
   end
 end
