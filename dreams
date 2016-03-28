@@ -1,0 +1,41 @@
+# Unauthenticated
+client = NuSpotify::Client.new
+
+client.album('idsjfoielkfnlekfj') # => NuSpotify::Album
+client.albums(['idsjfoielkfnlekfj','eidkikekkdkdii']) # => [NuSpotify::Album]
+client.search(album: "Dookie") # => [NuSpotify::Album]
+client.search(artist: "Green Day") # => [NuSpotify::Artist]
+client.search("Green Day") # => {:artists => [NuSpotify::Artist]}
+client.playlists # => Must authenticate to see playlists
+client.authenticate!("token", "token")
+
+green_day = client.search(artist: "Green Day").first # => [NuSpotify::Artist]
+dookie = green_day.albums.first
+dookie.name # => Dookie
+dookie.tracks # figure it out # => [NuSpotify::Track]
+
+NuSpotify::AlbumSimplified
+NuSpotify::AlbumFull
+
+
+def search(album: nil, artist: nil, playlist: nil, track: nil, all=nil)
+  if all
+      MegaSearch.new(all).run
+  elsif album
+      AlbumSearch.new(artist).run
+  elsif artist
+      ArtistSearch.new(artist).run
+  elsif playlist
+      PlaylistSearch.new(playlist).run
+  elsif track
+      TrackSearch.new(track).run
+  else
+      raise :hell
+  end
+end
+
+pr = PagedResult.new(...)
+pr.next
+pr.items # => [NuSpotify::Tracks]
+
+dookie.tracks 
