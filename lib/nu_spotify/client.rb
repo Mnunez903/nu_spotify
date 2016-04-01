@@ -6,9 +6,9 @@ module NuSpotify
     end
 
     def find_albums(*ids)
-        ids.map do |id|
-            NuSpotify::Album.find(id, client: self)
-        end
+      ids.map do |id|
+        NuSpotify::Album.find(id, client: self)
+      end
     end
 
     def get(url)
