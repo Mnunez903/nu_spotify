@@ -5,6 +5,12 @@ module NuSpotify
       NuSpotify::Album.find(id, client: self)
     end
 
+    def find_albums(*ids)
+        ids.map do |id|
+            NuSpotify::Album.find(id, client: self)
+        end
+    end
+
     def get(url)
       if url.include?(BASE_URL)
         JSON.parse RestClient.get(url)
