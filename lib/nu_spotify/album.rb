@@ -19,14 +19,23 @@ module NuSpotify
 
     RESOURCE_BASE_URL = "/v1/albums"
 
-    def self.find(id, client:)
-      result = client.get(endpoint(id))
-      self.new(result, client)
+    def self.find(*ids, client:)
+      ids.flatten!
+      result = client.get(endpoint(ids))
+
+      if ids.one?
+        self.new(result, client)
+      else
+        result['albums'].map do |album|
+          self.new(album, client)
+        end
+      end
     end
 
     def self.endpoint(*ids)
+      ids.flatten!
       raise ArgumentError.new("wrong number of arguments (provide at least 1)") if ids.empty?
-
+      
       if ids.one?
         endpoint_for_one(ids.first)
       else
