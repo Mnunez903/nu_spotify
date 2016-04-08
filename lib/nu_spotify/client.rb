@@ -1,14 +1,8 @@
 module NuSpotify
   class Client
     BASE_URL = "https://api.spotify.com"
-    def find_album(id)
-      NuSpotify::Album.find(id, client: self)
-    end
-
-    def find_albums(*ids)
-      ids.map do |id|
-        NuSpotify::Album.find(id, client: self)
-      end
+    def find_album(*ids)
+      NuSpotify::Album.find(ids, client: self)
     end
 
     def get(url)

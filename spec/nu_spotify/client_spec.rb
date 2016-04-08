@@ -21,7 +21,7 @@ describe NuSpotify::Client do
     client = NuSpotify::Client.new
 
     VCR.use_cassette('get_dookie_and_american_idiot') do
-      albums = client.find_albums('4uG8q3GPuWHQlRbswMIRS6', '5Qhn2FpGWmTjCuntF09j7g')
+      albums = client.find_album('4uG8q3GPuWHQlRbswMIRS6', '5Qhn2FpGWmTjCuntF09j7g')
     end
 
     expect(albums.length).to eq(2)
