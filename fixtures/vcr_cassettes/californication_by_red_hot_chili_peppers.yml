@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/tracks/34KTEhpPjq6IAgQg2yzJAL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 09 Apr 2016 01:45:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=600
+      Cache-Control:
+      - public, max-age=7200
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Origin, Content-Type
+      Content-Encoding:
+      - gzip
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000;
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAKRU21LbMBB971d4/EzxXbbyRlNaoEyHFigz7XQysrSKBb4I
+        WeFShn+vIysJARwy7aPPrs+e3XPsh3eO45Iyn1WuM3IeuqfF80TfS5iDtrxj
+        azdElCQvYVIRdQW6nbf8ctzzU9f5bXvgToOqSTmZqbJd8XaVVjZa8HtDW2gt
+        25HnNRLqXVvYpU3lmXmez48L4PVlefgjkp+/fsIXTTb+6BqmRzuoUMDXuIgU
+        a1Q3Qc/WDtFZIsEMzRtNFZmC3Xe5UQFiWug5iGJ/Z4F2i6/p6lRRVneSPEPi
+        hcinKUGMBHGeBxGJKcWQJjlP8iTGPM9STsKQYHfJeCuYLuwYe4PXRET+9iIQ
+        xxmhNGYkhjxDlIQcQ04g4RkP0ggSTBOSdxd+KaIbs0EEirc/RDec+WEaMAxx
+        HvAo5QzRACeAOixNgaGAkuw1DSjuJSxjV5OqD+yYlII3qhaUaNHUC/9eD/RM
+        CQPa2IxMcTScPpM9lygtWr0Whv+OvaH0/ONs/+7MD7PLg4ixffrz9vroKPmH
+        3PcKh/ieBX9j0/Kw34E5B412xoUohXMCUoJqX57XTB68r6mOhte0hr79p3GZ
+        aOmknlU5qHkt6MGZMq5PKvNCFOI0ikwF7mQpqDAR5aRswaLWNcGemOaKVlGj
+        +/z04kOAse8j7K/8H/B6O6e1IvTKi+IvZ/uFPLm8Rod702/T8P7P0d7xasQ2
+        JhumdojK0FiHN7Vs/HBc2chZSZTQZqvU70EFNwJuJ8+/b7n8visZvbddXpAm
+        FOLYD0PMQp4nEeoQxCNAGcUoTru/D8kAoB9olnriK+rRRbxMue98ni1TGg0d
+        9vEvAAAA//8DAABaQSftBgAA
+    http_version: 
+  recorded_at: Sat, 09 Apr 2016 01:45:06 GMT
+recorded_with: VCR 3.0.1
